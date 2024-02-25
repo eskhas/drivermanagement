@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <h1>Driver Information Form</h1>
+    <form th:action="@{/driver}" th:object="${driver}" method="post">
+        <div>
+            <label>Name</label>
+            <input type="text" th:field="*{name}" placeholder="Driver Name">
+        </div>
+        <div>
+            <label>Address</label>
+            <input type="text" th:field="*{address}" placeholder="Address">
+        </div>
+        <div>
+            <label>Phone</label>
+            <input type="number" th:field="*{phone}" placeholder="Phone">
+        </div>
+        <button type="submit" value="save">Save</button>
+        <button type="submit" value="update">Update</button>
+        <button type="submit" value="delete">Delete</button>
+    </form>
+</body>
+</html>
